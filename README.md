@@ -1,3 +1,7 @@
+# Downloads
+- Download the `mobi` file from [here](https://github.com/saadixl/Bangla-Quran-Ebook/blob/main/dist/bangla-quran.mobi).
+- Download the `epub` file from [here](https://github.com/saadixl/Bangla-Quran-Ebook/blob/main/dist/bangla-quran.epub).
+
 # Why this project exists?
 I failed to find a Bangla Quran Ebook which can be read with Kindle properly. There are some PDFs available but not what I am looking for. That's why I have decided to start creating a Bangla Quran eBook which can be read in Kindle properly.
 
