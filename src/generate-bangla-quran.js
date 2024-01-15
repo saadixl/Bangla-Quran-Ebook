@@ -26,16 +26,24 @@ function convertNumberToBangla(id) {
 function main() {
     // Read the empty HTML file
     let canvas = fs.readFileSync(path.resolve(__dirname, '../data/canvas.html'), 'utf8');
-    let mainEl = '<main>';
+
+    // Creating the index
+    let indexElement = `<section><h1>সূচিপত্র</h1>`;
+    quranJson.forEach((sura, i) => {
+        const { id, translation } = sura;
+        const indexItemTitle = `${convertNumberToBangla(id)}. ${suraBanglaPhoneticNames[i]} (${translation.trim()})`;
+        indexElement += `<p><a href="#${id}">${indexItemTitle}</a></p>`
+    });
+
+    indexElement += '</section><br /><br/>';
+    let mainEl = `<main>${indexElement}`;
     // Traverse all suras
     quranJson.forEach((sura, i) => {
-        const {
-            id, translation, verses
-        } = sura;
+        const { id, translation, verses } = sura;
         const titlePresentation = `${convertNumberToBangla(id)}. ${suraBanglaPhoneticNames[i]}`;
         const metadataPresentation = `<strong><p>সূরার নামের অর্থ: ${translation.trim()}<br/>আয়াত সংখ্যা: ${convertNumberToBangla(verses.length)}</p></strong>`;
         // Create a new section for a sura and place the title
-        let sectionEl = `<section><h2>${titlePresentation}</h2>${metadataPresentation}`;
+        let sectionEl = `<section id="${id}"><h2>${titlePresentation}</h2>${metadataPresentation}`;
         // Traverse all verses
         verses.forEach((verse) => {
             const { id, translation } = verse;
@@ -43,7 +51,7 @@ function main() {
             // Insert verses in the section
             sectionEl += `<p>${versePresentation}</p>`;
         });
-        sectionEl += `</section><br/><br/>`;
+        sectionEl += '</section><br/><br/>';
         mainEl += sectionEl;
     });
     mainEl += '</main>';
