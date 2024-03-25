@@ -62,7 +62,7 @@ function main() {
             if (juzzStart) {
                 //console.log("juzzStart", juzzStart);
                 const juzzPresentation = `${convertNumberToBangla(juzzStart)}`;
-                sectionEl += `<h2 style="text-align: center;font-weight:bold;"> --- পারা ${juzzPresentation} --- </h2>`;
+                sectionEl += `<p style="text-align: center;font-weight:bold;border-bottom:1px solid currentColor;margin-bottom:30px;">পারা ${juzzPresentation}</p>`;
             }
 
             const versePresentation = `${convertNumberToBangla(id)}. ${translation}`;
