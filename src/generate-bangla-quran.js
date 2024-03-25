@@ -52,6 +52,7 @@ function main() {
         const suraId = id;
         const titlePresentation = `${convertNumberToBangla(id)}. ${suraBanglaPhoneticNames[i]}`;
         const metadataPresentation = `<strong><p>সূরার নামের অর্থ: ${translation.trim()}<br/>আয়াত সংখ্যা: ${convertNumberToBangla(verses.length)}</p></strong>`;
+        const halfOfSura = Math.ceil(verses.length / 2);
         // Create a new section for a sura and place the title
         let sectionEl = `<section id="${id}"><h2>${titlePresentation}</h2>${metadataPresentation}`;
         // Traverse all verses
@@ -63,9 +64,15 @@ function main() {
                 const juzzPresentation = `${convertNumberToBangla(juzzStart)}`;
                 sectionEl += `<h2 style="text-align: center;font-weight:bold;"> --- পারা ${juzzPresentation} --- </h2>`;
             }
+
             const versePresentation = `${convertNumberToBangla(id)}. ${translation}`;
             // Insert verses in the section
             sectionEl += `<p>${versePresentation}</p>`;
+
+            if(halfOfSura > 25 && id === halfOfSura) {
+                const halfOfSuraPresentation = "*** সুরার অর্ধেক আয়াত শেষ হলো";
+                sectionEl += `<p style="font-size:75%;text-align: right;">${halfOfSuraPresentation}</p>`;
+            }
         });
         sectionEl += '</section><br/><br/>';
         mainEl += sectionEl;
