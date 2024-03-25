@@ -1,0 +1,152 @@
+[
+    {
+        "sura": 1,
+        "verse": 1,
+        "juzz": 1
+    },
+    {
+        "sura": 2,
+        "verse": 142,
+        "juzz": 2
+    },
+    {
+        "sura": 2,
+        "verse": 253,
+        "juzz": 3
+    },
+    {
+        "sura": 3,
+        "verse": 93,
+        "juzz": 4
+    },
+    {
+        "sura": 4,
+        "verse": 24,
+        "juzz": 5
+    },
+    {
+        "sura": 4,
+        "verse": 148,
+        "juzz": 6
+    },
+    {
+        "sura": 5,
+        "verse": 82,
+        "juzz": 7
+    },
+    {
+        "sura": 6,
+        "verse": 111,
+        "juzz": 8
+    },
+    {
+        "sura": 7,
+        "verse": 88,
+        "juzz": 9
+    },
+    {
+        "sura": 8,
+        "verse": 41,
+        "juzz": 10
+    },
+    {
+        "sura": 9,
+        "verse": 93,
+        "juzz": 11
+    },
+    {
+        "sura": 11,
+        "verse": 6,
+        "juzz": 12
+    },
+    {
+        "sura": 12,
+        "verse": 53,
+        "juzz": 13
+    },
+    {
+        "sura": 15,
+        "verse": 1,
+        "juzz": 14
+    },
+    {
+        "sura": 17,
+        "verse": 1,
+        "juzz": 15
+    },
+    {
+        "sura": 18,
+        "verse": 75,
+        "juzz": 16
+    },
+    {
+        "sura": 21,
+        "verse": 1,
+        "juzz": 17
+    },
+    {
+        "sura": 23,
+        "verse": 1,
+        "juzz": 18
+    },
+    {
+        "sura": 25,
+        "verse": 21,
+        "juzz": 19
+    },
+    {
+        "sura": 27,
+        "verse": 56,
+        "juzz": 20
+    },
+    {
+        "sura": 29,
+        "verse": 46,
+        "juzz": 21
+    },
+    {
+        "sura": 33,
+        "verse": 31,
+        "juzz": 22
+    },
+    {
+        "sura": 36,
+        "verse": 28,
+        "juzz": 23
+    },
+    {
+        "sura": 39,
+        "verse": 32,
+        "juzz": 24
+    },
+    {
+        "sura": 41,
+        "verse": 47,
+        "juzz": 25
+    },
+    {
+        "sura": 46,
+        "verse": 1,
+        "juzz": 26
+    },
+    {
+        "sura": 51,
+        "verse": 31,
+        "juzz": 27
+    },
+    {
+        "sura": 58,
+        "verse": 1,
+        "juzz": 28
+    },
+    {
+        "sura": 67,
+        "verse": 1,
+        "juzz": 29
+    },
+    {
+        "sura": 78,
+        "verse": 1,
+        "juzz": 30
+    }
+]

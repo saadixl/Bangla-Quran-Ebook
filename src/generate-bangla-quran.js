@@ -1,4 +1,5 @@
 const quranJson = require('../data/bangla-quran.json');
+const juzz = require('../data/juzz.json');
 const fs = require('fs');
 const path = require('path');
 
@@ -23,6 +24,14 @@ function convertNumberToBangla(id) {
     }).join("");
 }
 
+function getJuzzStart(suraId, verseId) {
+    for (let j = 0; j < juzz.length; j++) {
+        if (suraId === juzz[j].sura && verseId === juzz[j].verse) {
+            return juzz[j].juzz;
+        }
+    }
+}
+
 function main() {
     // Read the empty HTML file
     let canvas = fs.readFileSync(path.resolve(__dirname, '../data/canvas.html'), 'utf8');
@@ -40,6 +49,7 @@ function main() {
     // Traverse all suras
     quranJson.forEach((sura, i) => {
         const { id, translation, verses } = sura;
+        const suraId = id;
         const titlePresentation = `${convertNumberToBangla(id)}. ${suraBanglaPhoneticNames[i]}`;
         const metadataPresentation = `<strong><p>সূরার নামের অর্থ: ${translation.trim()}<br/>আয়াত সংখ্যা: ${convertNumberToBangla(verses.length)}</p></strong>`;
         // Create a new section for a sura and place the title
@@ -47,6 +57,12 @@ function main() {
         // Traverse all verses
         verses.forEach((verse) => {
             const { id, translation } = verse;
+            const juzzStart = getJuzzStart(suraId, id);
+            if (juzzStart) {
+                //console.log("juzzStart", juzzStart);
+                const juzzPresentation = `${convertNumberToBangla(juzzStart)}`;
+                sectionEl += `<h2 style="text-align: center;font-weight:bold;"> --- পারা ${juzzPresentation} --- </h2>`;
+            }
             const versePresentation = `${convertNumberToBangla(id)}. ${translation}`;
             // Insert verses in the section
             sectionEl += `<p>${versePresentation}</p>`;
@@ -56,7 +72,7 @@ function main() {
     });
     mainEl += '</main>';
     const quranOnCanvas = canvas.replace("%%%", mainEl);
-    console.log(quranOnCanvas);
+    // console.log(quranOnCanvas);
     fs.writeFileSync(
         path.resolve(__dirname, '../dist/bangla-quran.html'),
         quranOnCanvas,
