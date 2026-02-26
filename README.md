@@ -11,6 +11,6 @@ You need to have node.js in your machine first. Then pull this repo in your mach
 # Acknowledgements
 I have collected the Bangla Quran json from (https://github.com/risan/quran-json)[https://github.com/risan/quran-json] repo. The download link for the file was (https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_bn.json)[https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_bn.json]. My understanding is that the source of the translation and transliteration is [https://tanzil.net](https://tanzil.net).
 
-**The source json file is untouched. I am just using them to create a eBook. If you find any issue or mistakes, please create an issue in this repo.**
+**The content of the json files are untouched. I am just using them to create a eBook. If you find any issue or mistakes, please create an issue in this repo.**
 
 **The project is a work in progress**
